@@ -125,7 +125,7 @@ String endT;
 
 //*********************************************setup***************************************//
 void setup() {
-  size(846, 600);
+  size(846, 550);
   //****************************game levels***********************************//
   stageNum = 0;
 
@@ -323,6 +323,7 @@ void draw() {
   } else if (stageNum == 4) {
     end();
   }
+
 }
 
 //***********************music stop*******************************//
@@ -351,12 +352,12 @@ void coverPage() {
   textAlign(LEFT);
   textSize(28);
   fill(255); 
-  text(coverIntro, 40, 160, width - 550, height);
-  text(click_to_flip, 40, 510, width - 550, height);
+  text(coverIntro, 40, 100, width - 550, height);
+  text(click_to_flip, 40, 460, width - 550, height);
 
   textSize(40);
   fill(255, 0, 0);
-  text(dare, 40, 360, width - 550, height);
+  text(dare, 40, 330, width - 550, height);
 
   //flip
   if (mousePressed) {
