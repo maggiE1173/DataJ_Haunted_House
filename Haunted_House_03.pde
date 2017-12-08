@@ -323,9 +323,6 @@ void draw() {
   } else if (stageNum == 4) {
     end();
   }
-
-  println("check stage:" + stageNum);
-  println("check i:" + i);
 }
 
 //***********************music stop*******************************//
