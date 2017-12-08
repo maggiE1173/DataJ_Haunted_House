@@ -189,7 +189,7 @@ void setup() {
   intro[2]= "At the end of March in 1984, occupants lived in Elizabeth House in Causeway Bay found blood oozing from a planter of the next unit. \nThe police then dug out two men from the planter and confirmed that the deceased were two millionaires from Singapore, who were 32 and 28 years old respectively.";
   intro[3] = "Finery Park, a wealthy estate in Tseung Kwan O, reported a double-body murder case. \nTenants found the house next door was too quiet and tried to open the door. \nThey then found a couple of over 30-year-old died in the room near burned charcoal."; 
   intro[4] = "A man was found dead near burned charcoal by his mother in a house at Park Island Tower 2 in Ma Wan.";
-  intro[5] = "In April, an elderly man jumped from his apartment at Lei King Wan Yat Wah Mansion, Sai Wan Ho because he was too pessimistic about his illness."; 
+  intro[5] = "In April, an elderly jumped from his apartment at Lei King Wan Yat Wah Mansion, Sai Wan Ho because he was too pessimistic about his illness."; 
   intro[6] = "The murderer surnamed Ding killed a girl, surnamed Wang, with whom he had a sexual trade at Yan Fat Building, Sham Shui Po, while they were in bed.  \nTo escape from punishment, Wang dumped the meat and viscera into the toilet while the head and body were hidden in a box. \nTogether with the bricks,  he threw the box into the sea.";
 
   //normal price text
