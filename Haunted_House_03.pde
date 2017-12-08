@@ -125,7 +125,7 @@ String endT;
 
 //*********************************************setup***************************************//
 void setup() {
-  size(846, 520);
+  size(846, 510);
   //****************************game levels***********************************//
   stageNum = 0;
 
@@ -352,12 +352,12 @@ void coverPage() {
   textAlign(LEFT);
   textSize(26);
   fill(255); 
-  text(coverIntro, 40, 90, width - 550, height);
-  text(click_to_flip, 40, 440, width - 550, height);
+  text(coverIntro, 40, 80, width - 550, height);
+  text(click_to_flip, 40, 430, width - 550, height);
 
   textSize(40);
   fill(255, 0, 0);
-  text(dare, 40, 320, width - 550, height);
+  text(dare, 40, 310, width - 550, height);
 
   //flip
   if (mousePressed) {
@@ -1029,7 +1029,7 @@ void Q1_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize(24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2)
   {
     fill(0, 255, 0);
@@ -1037,32 +1037,32 @@ void Q1_optionBox() {
     //player3_L2.play();
     fill(0);
     textSize(24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize(24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize(24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1113,39 +1113,39 @@ void Q2_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 360, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 360, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1193,39 +1193,39 @@ void Q3_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1272,39 +1272,39 @@ void Q4_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1354,39 +1354,39 @@ void Q5_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1436,39 +1436,39 @@ void Q6_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
@@ -1518,39 +1518,39 @@ void Q7_optionBox() {
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 350, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 350, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
     rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 510);
+    text(flip1, 580, 500);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
     rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 510);
+    text(flip2, 580, 500);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
     rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 510);
+    text(flip3, 580, 500);
   }
 
   if (i == 1 || i == 2) {
