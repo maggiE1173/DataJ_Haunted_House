@@ -125,7 +125,7 @@ String endT;
 
 //*********************************************setup***************************************//
 void setup() {
-  size(964, 640);
+  size(946, 600);
   //****************************game levels***********************************//
   stageNum = 0;
 
@@ -184,12 +184,12 @@ void setup() {
   counterL1_1 = 0;
   choice = int(random(0, num-1));
 
-  intro[0]= "A 53-year-old woman surnamed Huang set up an insurance company more than 20 years ago. \nHowever, because of the bad economy and a large amount of liability which worthed 40 million, she committed suicide at her residence at Mei Foo Chuen Stage 1 in Lai Chi Kok.";
+  intro[0]= "A 53-year-old woman surnamed Huang set up a insurance company more than 20 years ago. \nHowever, because of the bad economy and a large amount of liability which worthed 40 million, she committed suicide at her residence at Mei Foo Chuen Stage 1 in Lai Chi Kok.";
   intro[1] = "A man surnamed Chen was a former occupant of the house at Tsuen Wan Centre. \nIn 1996, his business failed which put him in deeply in debt. \nAs the desperation surged, one day, he turned on the gas and killed 6 people including his wife, 3 children, and 2 cousins.";
   intro[2]= "At the end of March in 1984, occupants lived in Elizabeth House in Causeway Bay found blood oozing from a planter of the next unit. \nThe police then dug out two men from the planter and confirmed that the deceased were two millionaires from Singapore, who were 32 and 28 years old respectively.";
   intro[3] = "Finery Park, a wealthy estate in Tseung Kwan O, reported a double-body murder case. \nTenants found the house next door was too quiet and tried to open the door. \nThey then found a couple of over 30-year-old died in the room near burned charcoal."; 
   intro[4] = "A man was found dead near burned charcoal by his mother in a house at Park Island Tower 2 in Ma Wan.";
-  intro[5] = "In April, an elderly jumped from his apartment at Lei King Wan Yat Wah Mansion, Sai Wan Ho because he was too pessimistic about his illness."; 
+  intro[5] = "In April, an elderly man jumped from his apartment at Lei King Wan Yat Wah Mansion, Sai Wan Ho because he was too pessimistic about his illness."; 
   intro[6] = "The murderer surnamed Ding killed a girl, surnamed Wang, with whom he had a sexual trade at Yan Fat Building, Sham Shui Po, while they were in bed.  \nTo escape from punishment, Wang dumped the meat and viscera into the toilet while the head and body were hidden in a box. \nTogether with the bricks,  he threw the box into the sea.";
 
   //normal price text
@@ -324,6 +324,8 @@ void draw() {
     end();
   }
 
+  println("check stage:" + stageNum);
+  println("check i:" + i);
 }
 
 //***********************music stop*******************************//
@@ -352,12 +354,12 @@ void coverPage() {
   textAlign(LEFT);
   textSize(28);
   fill(255); 
-  text(coverIntro, 40, 250, width - 550, height);
-  text(click_to_flip, 40, 600, width - 550, height);
+  text(coverIntro, 40, 160, width - 550, height);
+  text(click_to_flip, 40, 510, width - 550, height);
 
   textSize(40);
   fill(255, 0, 0);
-  text(dare, 40, 450, width - 550, height);
+  text(dare, 40, 360, width - 550, height);
 
   //flip
   if (mousePressed) {
@@ -380,11 +382,11 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[0].length() && counterL1_2 < normalP[0].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[0].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[0].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[0].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[0].length()) {
       //typeM_L1.stop();
@@ -393,10 +395,10 @@ int Q1(int choiceQ1) {
       Q1_optionBox();
 
       fill(255);
-      text(option_Q1[0], 20, 480);
-      text(option_Q1[1], 420, 480);
-      text(option_Q1[2], 20, 520);
-      text(option_Q1[3], 420, 520);
+      text(option_Q1[0], 20, 390);
+      text(option_Q1[1], 420, 390);
+      text(option_Q1[2], 20, 430);
+      text(option_Q1[3], 420, 430);
     }
 
     break;
@@ -407,11 +409,11 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[1].length() && counterL1_2 < normalP[1].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[1].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[1].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[1].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[0].length()) {
       //typeM_L1.stop();
@@ -420,10 +422,10 @@ int Q1(int choiceQ1) {
       Q2_optionBox();
 
       fill(255);
-      text(option_Q2[0], 20, 480);
-      text(option_Q2[1], 420, 480);
-      text(option_Q2[2], 20, 520);
-      text(option_Q2[3], 420, 520);
+      text(option_Q2[0], 20, 390);
+      text(option_Q2[1], 420, 390);
+      text(option_Q2[2], 20, 430);
+      text(option_Q2[3], 420, 430);
     }
 
     break;
@@ -435,11 +437,11 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[2].length() && counterL1_2 < normalP[2].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[2].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[2].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[2].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[1].length()) {
       //typeM_L1.stop();
@@ -448,10 +450,10 @@ int Q1(int choiceQ1) {
       Q3_optionBox();
 
       fill(255);
-      text(option_Q3[0], 20, 480);
-      text(option_Q3[1], 420, 480);
-      text(option_Q3[2], 20, 520);
-      text(option_Q3[3], 420, 520);
+      text(option_Q3[0], 20, 390);
+      text(option_Q3[1], 420, 390);
+      text(option_Q3[2], 20, 430);
+      text(option_Q3[3], 420, 430);
     }
     break;
 
@@ -462,20 +464,20 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[3].length() && counterL1_2 < normalP[3].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[3].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[3].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[3].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[2].length()) {
       Q4_optionBox();
 
       fill(255);
-      text(option_Q4[0], 20, 480);
-      text(option_Q4[1], 420, 480);
-      text(option_Q4[2], 20, 520);
-      text(option_Q4[3], 420, 520);
+      text(option_Q4[0], 20, 390);
+      text(option_Q4[1], 420, 390);
+      text(option_Q4[2], 20, 430);
+      text(option_Q4[3], 420, 430);
       //typeM_L1.stop();
       //player2_L1.play();
     }
@@ -488,20 +490,20 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[4].length() && counterL1_2 < normalP[4].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[4].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[4].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[4].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[3].length()) {
       Q5_optionBox();
 
       fill(255);
-      text(option_Q5[0], 20, 480);
-      text(option_Q5[1], 420, 480);
-      text(option_Q5[2], 20, 520);
-      text(option_Q5[3], 420, 520);
+      text(option_Q5[0], 20, 390);
+      text(option_Q5[1], 420, 390);
+      text(option_Q5[2], 20, 430);
+      text(option_Q5[3], 420, 430);
       //typeM_L1.stop();
       //player2_L1.play();
     }
@@ -514,20 +516,20 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[5].length() && counterL1_2 < normalP[5].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[5].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[5].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[5].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[4].length()) {
       Q6_optionBox();
 
       fill(255);
-      text(option_Q6[0], 20, 480);
-      text(option_Q6[1], 420, 480);
-      text(option_Q6[2], 20, 520);
-      text(option_Q6[3], 420, 520);
+      text(option_Q6[0], 20, 390);
+      text(option_Q6[1], 420, 390);
+      text(option_Q6[2], 20, 430);
+      text(option_Q6[3], 420, 430);
       //typeM_L1.stop();
       //player2_L1.play();
     }
@@ -540,20 +542,20 @@ int Q1(int choiceQ1) {
 
     if (counterL1_1 >= intro[6].length() && counterL1_2 < normalP[6].length() && frameCount % 3 == 0)
       counterL1_2 ++;
-    text(normalP[6].substring(0, counterL1_2), 20, 300, width - 50, height);
+    text(normalP[6].substring(0, counterL1_2), 20, 250, width - 50, height);
 
     if (counterL1_2 >= normalP[6].length() && counterL1_3 < question.length() && frameCount % 3 == 0)
       counterL1_3 ++;
-    text(question.substring(0, counterL1_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL1_3), 20, 310, width - 50, height);
 
     if (counterL1_3 >= normalP[5].length()) {
       Q7_optionBox();
 
       fill(255);
-      text(option_Q7[0], 20, 480);
-      text(option_Q7[1], 420, 480);
-      text(option_Q7[2], 20, 520);
-      text(option_Q7[3], 420, 520);
+      text(option_Q7[0], 20, 390);
+      text(option_Q7[1], 420, 390);
+      text(option_Q7[2], 20, 430);
+      text(option_Q7[3], 420, 430);
       //typeM_L1.stop();
       //player2_L1.play();
     }
@@ -590,20 +592,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[0].length() && counterL2_2 < normalP[0].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[0].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[0].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[0].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[0].length()) {
       Q1_optionBox();
 
       fill(255);
-      text(option_Q1[0], 20, 480);
-      text(option_Q1[1], 420, 480);
-      text(option_Q1[2], 20, 520);
-      text(option_Q1[3], 420, 520);
+      text(option_Q1[0], 20, 390);
+      text(option_Q1[1], 420, 390);
+      text(option_Q1[2], 20, 430);
+      text(option_Q1[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -615,20 +617,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[1].length() && counterL2_2 < normalP[1].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[1].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[1].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[1].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[0].length()) {
       Q2_optionBox();
 
       fill(255);
-      text(option_Q2[0], 20, 480);
-      text(option_Q2[1], 420, 480);
-      text(option_Q2[2], 20, 520);
-      text(option_Q2[3], 420, 520);
+      text(option_Q2[0], 20, 390);
+      text(option_Q2[1], 420, 390);
+      text(option_Q2[2], 20, 430);
+      text(option_Q2[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -641,20 +643,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[2].length() && counterL2_2 < normalP[2].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[2].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[2].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[2].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[1].length()) {
       Q3_optionBox();
 
       fill(255);
-      text(option_Q3[0], 20, 480);
-      text(option_Q3[1], 420, 480);
-      text(option_Q3[2], 20, 520);
-      text(option_Q3[3], 420, 520);
+      text(option_Q3[0], 20, 390);
+      text(option_Q3[1], 420, 390);
+      text(option_Q3[2], 20, 430);
+      text(option_Q3[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -667,20 +669,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[3].length() && counterL2_2 < normalP[3].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[3].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[3].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[3].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[2].length()) {
       Q4_optionBox();
 
       fill(255);
-      text(option_Q4[0], 20, 480);
-      text(option_Q4[1], 420, 480);
-      text(option_Q4[2], 20, 520);
-      text(option_Q4[3], 420, 520);
+      text(option_Q4[0], 20, 390);
+      text(option_Q4[1], 420, 390);
+      text(option_Q4[2], 20, 430);
+      text(option_Q4[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -693,20 +695,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[4].length() && counterL2_2 < normalP[4].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[4].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[4].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[4].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[3].length()) {
       Q5_optionBox();
 
       fill(255);
-      text(option_Q5[0], 20, 480);
-      text(option_Q5[1], 420, 480);
-      text(option_Q5[2], 20, 520);
-      text(option_Q5[3], 420, 520);
+      text(option_Q5[0], 20, 390);
+      text(option_Q5[1], 420, 390);
+      text(option_Q5[2], 20, 430);
+      text(option_Q5[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -719,20 +721,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[5].length() && counterL2_2 < normalP[5].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[5].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[5].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[5].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[4].length()) {
       Q6_optionBox();
 
       fill(255);
-      text(option_Q6[0], 20, 480);
-      text(option_Q6[1], 420, 480);
-      text(option_Q6[2], 20, 520);
-      text(option_Q6[3], 420, 520);
+      text(option_Q6[0], 20, 390);
+      text(option_Q6[1], 420, 390);
+      text(option_Q6[2], 20, 430);
+      text(option_Q6[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -745,20 +747,20 @@ int Q2(int choiceQ2) {
 
     if (counterL2_1 >= intro[6].length() && counterL2_2 < normalP[6].length() && frameCount % 3 == 0)
       counterL2_2 ++;
-    text(normalP[6].substring(0, counterL2_2), 20, 300, width - 50, height);
+    text(normalP[6].substring(0, counterL2_2), 20, 250, width - 50, height);
 
     if (counterL2_2 >= normalP[6].length() && counterL2_3 < question.length() && frameCount % 3 == 0)
       counterL2_3 ++;
-    text(question.substring(0, counterL2_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL2_3), 20, 310, width - 50, height);
 
     if (counterL2_3 >= normalP[5].length()) {
       Q7_optionBox();
 
       fill(255);
-      text(option_Q6[0], 20, 480);
-      text(option_Q6[1], 420, 480);
-      text(option_Q6[2], 20, 520);
-      text(option_Q6[3], 420, 520);
+      text(option_Q6[0], 20, 390);
+      text(option_Q6[1], 420, 390);
+      text(option_Q6[2], 20, 430);
+      text(option_Q6[3], 420, 430);
       //typeM_L2.stop();
       //player2_L2.play();
     }
@@ -795,20 +797,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[0].length() && counterL3_2 < normalP[0].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[0].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[0].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[0].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[0].length()) {
       Q1_optionBox();
 
       fill(255);
-      text(option_Q1[0], 20, 480);
-      text(option_Q1[1], 420, 480);
-      text(option_Q1[2], 20, 520);
-      text(option_Q1[3], 420, 520);
+      text(option_Q1[0], 20, 390);
+      text(option_Q1[1], 420, 390);
+      text(option_Q1[2], 20, 430);
+      text(option_Q1[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -820,20 +822,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[1].length() && counterL3_2 < normalP[1].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[1].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[1].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[1].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[0].length()) {
       Q2_optionBox();
 
       fill(255);
-      text(option_Q2[0], 20, 480);
-      text(option_Q2[1], 420, 480);
-      text(option_Q2[2], 20, 520);
-      text(option_Q2[3], 420, 520);
+      text(option_Q2[0], 20, 390);
+      text(option_Q2[1], 420, 390);
+      text(option_Q2[2], 20, 430);
+      text(option_Q2[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -846,20 +848,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[2].length() && counterL3_2 < normalP[2].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[2].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[2].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[2].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[1].length()) {
       Q3_optionBox();
 
       fill(255);
-      text(option_Q3[0], 20, 480);
-      text(option_Q3[1], 420, 480);
-      text(option_Q3[2], 20, 520);
-      text(option_Q3[3], 420, 520);
+      text(option_Q3[0], 20, 390);
+      text(option_Q3[1], 420, 390);
+      text(option_Q3[2], 20, 430);
+      text(option_Q3[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -872,20 +874,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[3].length() && counterL3_2 < normalP[3].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[3].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[3].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[3].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[2].length()) {
       Q4_optionBox();
 
       fill(255);
-      text(option_Q4[0], 20, 480);
-      text(option_Q4[1], 420, 480);
-      text(option_Q4[2], 20, 520);
-      text(option_Q4[3], 420, 520);
+      text(option_Q4[0], 20, 390);
+      text(option_Q4[1], 420, 390);
+      text(option_Q4[2], 20, 430);
+      text(option_Q4[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -898,20 +900,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[4].length() && counterL3_2 < normalP[4].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[4].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[4].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[4].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[3].length()) {
       Q5_optionBox();
 
       fill(255);
-      text(option_Q5[0], 20, 480);
-      text(option_Q5[1], 420, 480);
-      text(option_Q5[2], 20, 520);
-      text(option_Q5[3], 420, 520);
+      text(option_Q5[0], 20, 390);
+      text(option_Q5[1], 420, 390);
+      text(option_Q5[2], 20, 430);
+      text(option_Q5[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -924,20 +926,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[5].length() && counterL3_2 < normalP[5].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[5].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[5].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[5].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[4].length()) {
       Q6_optionBox();
 
       fill(255);
-      text(option_Q6[0], 20, 480);
-      text(option_Q6[1], 420, 480);
-      text(option_Q6[2], 20, 520);
-      text(option_Q6[3], 420, 520);
+      text(option_Q6[0], 20, 390);
+      text(option_Q6[1], 420, 390);
+      text(option_Q6[2], 20, 430);
+      text(option_Q6[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -950,20 +952,20 @@ void Q3(int choiceQ3) {
 
     if (counterL3_1 >= intro[6].length() && counterL3_2 < normalP[6].length() && frameCount % 3 == 0)
       counterL3_2 ++;
-    text(normalP[6].substring(0, counterL3_2), 20, 300, width - 50, height);
+    text(normalP[6].substring(0, counterL3_2), 20, 250, width - 50, height);
 
     if (counterL3_2 >= normalP[6].length() && counterL3_3 < question.length() && frameCount % 3 == 0)
       counterL3_3 ++;
-    text(question.substring(0, counterL3_3), 20, 360, width - 50, height);
+    text(question.substring(0, counterL3_3), 20, 310, width - 50, height);
 
     if (counterL3_3 >= normalP[5].length()) {
       Q7_optionBox();
 
       fill(255);
-      text(option_Q7[0], 20, 480);
-      text(option_Q7[1], 420, 480);
-      text(option_Q7[2], 20, 520);
-      text(option_Q7[3], 420, 520);
+      text(option_Q7[0], 20, 390);
+      text(option_Q7[1], 420, 390);
+      text(option_Q7[2], 20, 430);
+      text(option_Q7[3], 420, 430);
       //typeM_L3.stop();
       //player2_L3.play();
     }
@@ -983,7 +985,7 @@ void end() {
   background(0);
   textSize(36);
   fill(255, 0, 0);
-  text(endT, 20, 250);
+  text(endT, 20, 160);
 }
 
 //****************************Q1 option box*********************************//
@@ -991,33 +993,33 @@ void end() {
 void Q1_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
@@ -1025,44 +1027,44 @@ void Q1_optionBox() {
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize(24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2)
   {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize(24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize(24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize(24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1075,33 +1077,33 @@ void Q1_optionBox() {
 void Q2_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
@@ -1109,43 +1111,43 @@ void Q2_optionBox() {
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1158,74 +1160,74 @@ void Q2_optionBox() {
 void Q3_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
   }
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1237,74 +1239,74 @@ void Q3_optionBox() {
 void Q4_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
   }
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1316,33 +1318,33 @@ void Q4_optionBox() {
 void Q5_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
@@ -1350,43 +1352,43 @@ void Q5_optionBox() {
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1398,33 +1400,33 @@ void Q5_optionBox() {
 void Q6_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     if (mousePressed) {
       i = 2;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
@@ -1432,43 +1434,43 @@ void Q6_optionBox() {
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 385, 35, 10);
+    rect(15, 400, 385, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
@@ -1480,33 +1482,33 @@ void Q6_optionBox() {
 void Q7_optionBox() {
   //option box
   fill(100);
-  rect(15, 450, 385, 35, 10);
-  rect(415, 450, 385, 35, 10);
-  rect(15, 490, 385, 35, 10);
-  rect(415, 490, 385, 35, 10);
+  rect(15, 360, 385, 35, 10);
+  rect(415, 360, 385, 35, 10);
+  rect(15, 400, 385, 35, 10);
+  rect(415, 400, 385, 35, 10);
 
   //right answer or wrong answer
-  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 450 && mouseY <= 485) { 
+  if (mouseX >= 15 && mouseX <= 400 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(15, 450, 385, 35, 10);
+    rect(15, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 450 && mouseY <= 485) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 360 && mouseY <= 395) { 
     fill(255, 0, 0);
-    rect(415, 450, 385, 35, 10);
+    rect(415, 360, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
-  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 15 && mouseX <= 400 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     if (mousePressed) {
       i = 2;
     }
-  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 490 && mouseY <= 525) { 
+  } else if (mouseX >= 415 && mouseX <= 800 && mouseY >= 400 && mouseY <= 435) { 
     fill(255, 0, 0);
-    rect(415, 490, 385, 35, 10);
+    rect(415, 400, 385, 35, 10);
     if (mousePressed) {
       i = 1;
     }
@@ -1514,43 +1516,43 @@ void Q7_optionBox() {
 
   if (i == 1 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     //player3_L1.play();
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 1 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     //player3_L2.play();
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 1 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     //player3_L3.play();
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   } else if (i == 2 && stageNum == 1) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip1, 580, 600);
+    text(flip1, 580, 510);
   } else if (i == 2 && stageNum == 2) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip2, 580, 600);
+    text(flip2, 580, 510);
   } else if (i == 2 && stageNum == 3) {
     fill(0, 255, 0);
-    rect(15, 490, 350, 35, 10);
+    rect(15, 400, 350, 35, 10);
     fill(0);
     textSize( 24);
-    text(flip3, 580, 600);
+    text(flip3, 580, 510);
   }
 
   if (i == 1 || i == 2) {
