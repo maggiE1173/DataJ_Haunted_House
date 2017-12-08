@@ -184,7 +184,7 @@ void setup() {
   counterL1_1 = 0;
   choice = int(random(0, num-1));
 
-  intro[0]= "A 53-year-old woman surnamed Huang set up a insurance company more than 20 years ago. \nHowever, because of the bad economy and a large amount of liability which worthed 40 million, she committed suicide at her residence at Mei Foo Chuen Stage 1 in Lai Chi Kok.";
+  intro[0]= "A 53-year-old woman surnamed Huang set up an insurance company more than 20 years ago. \nHowever, because of the bad economy and a large amount of liability which worthed 40 million, she committed suicide at her residence at Mei Foo Chuen Stage 1 in Lai Chi Kok.";
   intro[1] = "A man surnamed Chen was a former occupant of the house at Tsuen Wan Centre. \nIn 1996, his business failed which put him in deeply in debt. \nAs the desperation surged, one day, he turned on the gas and killed 6 people including his wife, 3 children, and 2 cousins.";
   intro[2]= "At the end of March in 1984, occupants lived in Elizabeth House in Causeway Bay found blood oozing from a planter of the next unit. \nThe police then dug out two men from the planter and confirmed that the deceased were two millionaires from Singapore, who were 32 and 28 years old respectively.";
   intro[3] = "Finery Park, a wealthy estate in Tseung Kwan O, reported a double-body murder case. \nTenants found the house next door was too quiet and tried to open the door. \nThey then found a couple of over 30-year-old died in the room near burned charcoal."; 
