@@ -125,7 +125,7 @@ String endT;
 
 //*********************************************setup***************************************//
 void setup() {
-  size(846, 530);
+  size(846, 520);
   //****************************game levels***********************************//
   stageNum = 0;
 
@@ -352,12 +352,12 @@ void coverPage() {
   textAlign(LEFT);
   textSize(26);
   fill(255); 
-  text(coverIntro, 40, 100, width - 550, height);
-  text(click_to_flip, 40, 450, width - 550, height);
+  text(coverIntro, 40, 90, width - 550, height);
+  text(click_to_flip, 40, 440, width - 550, height);
 
   textSize(40);
   fill(255, 0, 0);
-  text(dare, 40, 330, width - 550, height);
+  text(dare, 40, 320, width - 550, height);
 
   //flip
   if (mousePressed) {
