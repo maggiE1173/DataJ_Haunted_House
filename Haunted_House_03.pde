@@ -324,8 +324,6 @@ void draw() {
     end();
   }
 
-  println("check stage:" + stageNum);
-  println("check i:" + i);
 }
 
 //***********************music stop*******************************//
